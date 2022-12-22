@@ -2,7 +2,7 @@
 
 #### Usage
 
-Copy this file into your project, then use
+Copy `elixir_ppm.ex` into your project, then use
 
 `PpmTools.to_ppm(file_path, content, rows, cols, scale, color_map)`
 
