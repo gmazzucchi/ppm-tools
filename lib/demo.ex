@@ -1,11 +1,12 @@
 defmodule Demo do
+
   def demo() do
     rows = 100
     cols = 200
 
     points =
-      for ir <- 0..rows do
-        for ic <- 0..cols do
+      for ir <- 0..rows-1 do
+        for ic <- 0..cols-1 do
           {ir, ic}
         end
       end
@@ -28,6 +29,6 @@ defmodule Demo do
       |> Map.put(:white, "#{255} #{255} #{255} ")
       |> Map.put(:black, "#{0} #{0} #{0} ")
 
-    PpmTools.to_ppm(content, rows + 1, cols + 1, 4, color_map)
+    PpmTools.to_ppm("./output.ppm", content, rows, cols, color_map, 2)
   end
 end
